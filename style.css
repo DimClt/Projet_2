@@ -1,44 +1,72 @@
 /* Code couleur : Green = #7CB342 / Grey = #424242 */
 /* Largeur + Placement a droite est gauche des bloc principaux */
 body{
-    margin: 0;
-    padding: 0;
+    width: 1190px;
+    margin: auto;
 } 
 .right_side{
     width: calc( 100% - 400px);
+    padding-top: 100px;
+    padding-left: 65px;
 }
 .left_side{
     width: 400px;
     background-color: #7CB342;
+    padding-top: 70px;
 }
 .body{
     display: flex;
     flex-direction: row-reverse;
 }
 /* Left side interne */
+.left_side p{
+    padding-left: 45px;
+    padding-right: 45px;
+    text-align: justify;
+}
 .left_side h2{
     color: #7CB342;
     background-color: #424242;
+    padding-left: 0;
+    text-align: center;
+    margin-top: 45px;
+}
+.photo{
+    padding-left: 84px;
 }
 .photo img{
     border-radius: 100px;
-    width: 210px;
-    height: 210px;
+    width: 216px;
+    height: 216px;
+}
+.loisir i{
+    margin-right: 30px;
+}
+.loisir i:first-child{
+    margin-left: 60px;
+}
+.fa-dog, .fa-laptop, .fa-biking{
+    color: #424242;
 }
 /* Right side interne */
 h1 span{
     color: #7CB342;
 }
-.expe_inter{
+.expe_inter, .forma_princi{
     display: flex;
 }
-.expe_inter ul{
+.expe_inter ul, .forma_princi ul{
     width: 250px;
 }
-.expe_inter div{
+.expe_inter div, .forma_princi div{
     width: 460px;
 }
-
+section h2 i, footer h2 i{
+    margin-right: 25px;
+}
+.fa-pencil-alt, .fa-toolbox, .fa-graduation-cap{
+    color: #7CB342;
+} 
 /* Ligne verte : Hr */
 .section_princi{
     color: #7CB342;
