@@ -1,0 +1,51 @@
+/* Code couleur : Green = #7CB342 / Grey = #424242 */
+/* Largeur + Placement a droite est gauche des bloc principaux */
+body{
+    margin: 0;
+    padding: 0;
+} 
+.right_side{
+    width: calc( 100% - 400px);
+}
+.left_side{
+    width: 400px;
+    background-color: #7CB342;
+}
+.body{
+    display: flex;
+    flex-direction: row-reverse;
+}
+/* Left side interne */
+.left_side h2{
+    color: #7CB342;
+    background-color: #424242;
+}
+.photo img{
+    border-radius: 100px;
+    width: 210px;
+    height: 210px;
+}
+/* Right side interne */
+h1 span{
+    color: #7CB342;
+}
+.expe_inter{
+    display: flex;
+}
+.expe_inter ul{
+    width: 250px;
+}
+.expe_inter div{
+    width: 460px;
+}
+
+/* Ligne verte : Hr */
+.section_princi{
+    color: #7CB342;
+    width: 100%;
+}
+.title_header{
+    color: #7CB342;
+    width: 100px;
+    margin-left: 0;
+}
