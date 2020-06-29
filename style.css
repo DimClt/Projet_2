@@ -1,11 +1,26 @@
-/* Code couleur : Green = #7CB342 / Grey = #424242 */
-/* Largeur + Placement a droite est gauche des bloc principaux */
+/****************** Code couleur : Green = #7CB342 / Grey = #424242 ******************/
+
+/******************************* Fonts import **************************************/
+/*font-family: 'Merriweather', serif;
+font-family: 'Noto Sans TC', sans-serif;*/
+@font-face
+{
+    font-family: 'Dayrom';
+    src: url('fonts/dayrom.eot');
+    src: url('fonts/dayrom.eot?#iefix') format('embedded-opentype'),
+         url('fonts/dayrom.woff') format('woff'),
+         url('fonts/dayrom.ttf') format('truetype'),
+         url('fonts/dayrom.svg#Dayrom') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/****************** Largeur + Placement a droite est gauche des bloc principaux ******************/
 body{
-    width: 1190px;
     margin: auto;
-} 
+}
 .right_side{
-    width: calc( 100% - 400px);
+    width: calc(1190px - 465px);
     padding-top: 100px;
     padding-left: 65px;
 }
@@ -14,17 +29,23 @@ body{
     background-color: #7CB342;
     padding-top: 70px;
 }
-.body{
+.page{
+    width: 1190px;
+    margin: auto;
     display: flex;
     flex-direction: row-reverse;
 }
-/* Left side interne */
+
+/**************************** Left side interne *****************************/
+
 .left_side p{
+    font-family: 'Noto Sans TC', sans-serif;
     padding-left: 45px;
     padding-right: 45px;
     text-align: justify;
 }
 .left_side h2{
+    font-family: 'Merriweather', serif;
     color: #7CB342;
     background-color: #424242;
     padding-left: 0;
@@ -39,41 +60,154 @@ body{
     width: 216px;
     height: 216px;
 }
-.loisir i{
-    margin-right: 30px;
+.icon{
+    width: 350px;
+    margin: auto;
+    padding-left: 50px;
 }
-.loisir i:first-child{
-    margin-left: 60px;
+.loisir i{
+    margin-right: 50px;
 }
 .fa-dog, .fa-laptop, .fa-biking{
     color: #424242;
 }
-/* Right side interne */
+
+/************************** Right side interne ********************************/
+header{
+    margin-bottom: 120px;
+}
+header h1{
+    font-size: 3em;
+    font-family: 'Dayrom', 'Merriweather', serif;
+}
 h1 span{
     color: #7CB342;
 }
-.expe_inter, .forma_princi{
+.expe_inter, .forma_princi, .recomm{
     display: flex;
 }
+.recomm{
+    justify-content: space-around;
+    line-height: .7em;
+}
 .expe_inter ul, .forma_princi ul{
+    padding-left: 15px;
     width: 250px;
 }
 .expe_inter div, .forma_princi div{
-    width: 460px;
+    width: 400px;
 }
 section h2 i, footer h2 i{
     margin-right: 25px;
 }
 .fa-pencil-alt, .fa-toolbox, .fa-graduation-cap{
     color: #7CB342;
-} 
-/* Ligne verte : Hr */
+}
+.right_side h2{
+    font-family: 'Merriweather', serif;
+}
+.right_side li, .right_side p, .right_side h3{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.right_side p{
+    text-align: justify;
+}
+.resum_title{
+    font-family: 'Merriweather', serif;
+    font-style: italic;
+}
+/************************** Ligne verte : Hr ******************************/
+
 .section_princi{
     color: #7CB342;
-    width: 100%;
+    width: 720px;
 }
 .title_header{
     color: #7CB342;
     width: 100px;
     margin-left: 0;
+}
+
+/********************************* Responcive ******************************/
+
+@media only screen 
+    and (min-width: 750px)
+    and (max-width: 1189px){
+    /***************** Corp principal ***************/
+    .page{
+        display: block;
+        width: 750px;
+    }
+    /************** Partie droite devient principal ************/
+    .right_side{
+        width: 685px;
+        padding-top: 0;
+    }
+    /**************** Partie left passe en second *************/
+    .left_side{
+        width: 750px;
+    }
+    .photo{
+        width: 216px;
+        height: 216px;
+        margin: auto;
+        padding-left: 0;
+    }
+    /************* Placement partie intern left **************/
+    .responcive_tab{
+        display: flex;
+    }
+    /********************** Footer, loisir ***********************/
+    .icon{
+        width: 350px;
+        margin: auto;
+    }
+}
+
+/************************ Little screen responcive ******************/
+
+@media only screen
+    and (min-width: 360px)
+    and (max-width: 749px){
+    /****************** Principal petit écran *****************/
+    .page{
+        display: block;
+        width: 360px;
+    }
+    /***************** right side little screen *****************/
+    .right_side{
+        width: 350px;
+        padding-top: 0;
+        padding-left: 10px;
+    }
+    .forma_princi, .expe_inter, .recomm{
+        display: block;
+        margin-bottom: 50px;
+    }
+    .forma_princi div, .expe_inter div{
+        width: 340px;
+    }
+    /**************** left side little screen, second position ******************/
+    .left_side{
+        width: 360px;
+    }
+    .photo{
+        width: 216px;
+        height: 216px;
+        margin: auto;
+        padding-left: 0;
+    }
+    .recomm_left{
+        margin-bottom: 50px;
+    }
+    /************************ Footer, icon *********************/
+    .icon{
+        width: 350px;
+        margin: auto;
+        padding-left: 35px;
+    }
+    /********************* Hr little screen *******************/
+    .section_princi{
+        width: 330px;
+    }
 }
