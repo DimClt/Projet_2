@@ -37,7 +37,15 @@ body{
 }
 
 /**************************** Left side interne *****************************/
-
+.left_side{
+    position: relative;
+}
+.loisir{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 30px;
+}
 .left_side p{
     font-family: 'Noto Sans TC', sans-serif;
     padding-left: 45px;
@@ -51,25 +59,36 @@ body{
     padding-left: 0;
     text-align: center;
     margin-top: 45px;
+    margin-bottom: 40px;
+}
+.left_side .contact h2{
+    margin-top: 0;
 }
 .photo{
     padding-left: 84px;
+    margin-bottom: 70px;
 }
 .photo img{
-    border-radius: 100px;
+    border-radius: 50%;
     width: 216px;
     height: 216px;
 }
 .icon{
-    width: 350px;
+    width: 90%;
     margin: auto;
-    padding-left: 50px;
+    text-align: center;
+    padding-left: 4%;
 }
 .loisir i{
-    margin-right: 50px;
+    margin-right: 20px;
 }
 .fa-dog, .fa-laptop, .fa-biking{
     color: #424242;
+    border: solid #424242 3px;
+    border-radius: 50%;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
 }
 
 /************************** Right side interne ********************************/
@@ -91,16 +110,17 @@ h1 span{
 .expe_inter, .forma_princi, .recomm{
     display: flex;
 }
-.formation, .experience{
+.formation, .experience, .recommendation{
     margin-bottom: 60px;
 }
 .recomm{
-    justify-content: space-around;
     line-height: .7em;
+}
+.recomm_left, .recomm_right{
+    width: 50%;
 }
 .expe_inter ul, .forma_princi ul{
     width: 250px;
-    margin-right: 15px;
     list-style-type: none;
     padding-left: 0;
 }
@@ -116,7 +136,8 @@ h1 span{
     background-position: 0px 3px;
 }
 .expe_inter div, .forma_princi div{
-    width: 400px;
+    width: calc(100% - 250px);
+    padding-left: 10px;
 }
 section h2 i, footer h2 i{
     margin-right: 25px;
@@ -141,7 +162,7 @@ section h2 i, footer h2 i{
 
 .section_princi{
     color: #7CB342;
-    width: 720px;
+    width: 100%;
 }
 .title_header{
     color: #7CB342;
@@ -152,84 +173,111 @@ section h2 i, footer h2 i{
 
 /********************************* Responcive ******************************/
 
-@media only screen 
+@media only screen
     and (min-width: 750px)
     and (max-width: 1189px){
     /***************** Corp principal ***************/
     .page{
         display: block;
-        width: 750px;
+        width: 100%;
     }
     /************** Partie droite devient principal ************/
     .right_side{
-        width: 685px;
+        width: 750px;
         padding-top: 0;
+        padding-left: 0;
+        margin: auto;
     }
     /**************** Partie left passe en second *************/
     .left_side{
-        width: 750px;
+        width: 100%;
+        margin: auto;
+    }
+    .contact, .info{
+        width: 50%;
+    } 
+    .loisir{
+        position: inherit;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .loisir h2{
+        margin-top: 10px;
     }
     .photo{
         width: 216px;
         height: 216px;
         margin: auto;
+        margin-bottom: 70px;
+        padding-left: 0;
+    }
+    .icon{
         padding-left: 0;
     }
     /************* Placement partie intern left **************/
     .responcive_tab{
         display: flex;
     }
-    /********************** Footer, loisir ***********************/
-    .icon{
-        width: 350px;
-        margin: auto;
+    .responcive_tab h2{
+        margin-bottom: 50px;
+        margin-top: 0;
     }
 }
 
 /************************ Little screen responcive ******************/
 
-@media only screen
-    and (min-width: 360px)
+@media screen
     and (max-width: 749px){
     /****************** Principal petit écran *****************/
     .page{
         display: block;
-        width: 360px;
+        width: 100%;
     }
     /***************** right side little screen *****************/
     .right_side{
-        width: 350px;
+        width: 90%;
         padding-top: 0;
-        padding-left: 10px;
+        padding-left: 0;
+        margin: auto;
     }
     .forma_princi, .expe_inter, .recomm{
         display: block;
         margin-bottom: 50px;
     }
     .forma_princi div, .expe_inter div{
-        width: 340px;
+        width: 100%;
+        padding-left: 0;
+    }
+    .recomm p{
+        text-align: inherit;
     }
     /**************** left side little screen, second position ******************/
     .left_side{
-        width: 360px;
+        width: 100%;
+    }
+    .loisir{
+        position: inherit;
     }
     .photo{
         width: 216px;
         height: 216px;
         margin: auto;
         padding-left: 0;
+        margin-bottom: 70px;
     }
     .recomm_left{
         margin-bottom: 50px;
     }
+    .recomm_left, .recomm_right{
+        width: inherit;
+    }
     /************************ Footer, icon *********************/
-    .icon{
-        width: 350px;
-        margin: auto;
-        padding-left: 35px;
+    .loisir i{
+        margin-right: 2%;
     }
     /********************* Hr little screen *******************/
     .section_princi{
-        width: 330px;
+        width: 100%;
+        margin-left: 0;
     }
 }
