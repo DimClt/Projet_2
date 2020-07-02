@@ -271,15 +271,15 @@ section h2 i, footer h2 i{
     .left_side{
         width: 100%;
     }
-    .loisir{
-        position: inherit;
-    }
     .photo{
         width: 216px;
         height: 216px;
         margin: auto;
         padding-left: 0;
         margin-bottom: 70px;
+    }
+    .loisir{
+        position: inherit;
     }
     .recomm_left{
         margin-bottom: 50px;
