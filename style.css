@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /****************** Code couleur : Green = #7CB342 / Grey = #424242 ******************/
 
 /******************************* Fonts import **************************************/
@@ -32,8 +39,13 @@ body{
 .page{
     width: 1190px;
     margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
 }
 
 /**************************** Left side interne *****************************/
@@ -108,6 +120,8 @@ h1 span{
     color: #7CB342;
 }
 .expe_inter, .forma_princi, .recomm{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .formation, .experience, .recommendation{
@@ -216,6 +230,8 @@ section h2 i, footer h2 i{
     }
     /************* Placement partie intern left **************/
     .responcive_tab{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     .responcive_tab h2{
